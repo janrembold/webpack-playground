@@ -44,7 +44,11 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                options: {}
+                options: {
+                    loaders: {
+                        js: 'babel-loader'
+                    }
+                }
             }
         ]
     },
@@ -56,6 +60,8 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.optimize.ModuleConcatenationPlugin(),
+
         new webpack.optimize.CommonsChunkPlugin({
             names: [
                 "common",
