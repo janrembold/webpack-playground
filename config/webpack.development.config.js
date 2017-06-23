@@ -4,6 +4,8 @@ import bundleAnalyzer from 'webpack-bundle-analyzer';
 export default new Config().extend('config/webpack.base.config.js').merge({
     // devtool: '#source-map',
 
+    watch: true,
+
     output: {
         pathinfo: true
     },
@@ -14,9 +16,9 @@ export default new Config().extend('config/webpack.base.config.js').merge({
         }
     },
 
-    plugins: [
-        new bundleAnalyzer.BundleAnalyzerPlugin()
-    ],
+    // plugins: [
+    //     new bundleAnalyzer.BundleAnalyzerPlugin()
+    // ],
 
     devServer: {
         historyApiFallback: true,

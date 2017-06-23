@@ -7,7 +7,7 @@ export default new Config().merge({
     entry: function() {
         return {
             "common": [
-                "./src/lib/load.js"
+                "./src/main.js"
             ],
             "vendor": [
                 "jquery",
@@ -23,7 +23,7 @@ export default new Config().merge({
     },
 
     output: {
-        path: path.join(__dirname, "dist"),
+        path: path.join(__dirname, "../dist"),
         publicPath: 'dist/',
         filename: '[name].bundle.js',
         chunkFilename : '[name].chunk.js'
