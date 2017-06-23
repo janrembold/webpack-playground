@@ -1,0 +1,45 @@
+{
+	"site": [
+		{
+			"id": 1,
+			"slug": "home",
+			"head": {
+				"title": "Dynamic site title",
+				"meta": [
+					{
+						"name": "robots",
+						"content": "index,follow"
+					}
+				]
+			},
+			"body": [
+				{
+					"type": "hero",
+					"title": "Home page hero title",
+					"text": "Lorem ipsum",
+					"link": "/subnav/siteX.html"
+				},
+				{
+					"type": "teaser",
+					"teasers": [
+						{
+							"title": "Home page teaser 1",
+							"text": "Lorem ipsum teaser 1",
+							"link": "/subnav/site1.html"
+						},
+						{
+							"title": "Home page teaser 2",
+							"text": "Lorem ipsum teaser 2",
+							"link": "/subnav/site2.html"
+						},
+						{
+							"title": "Home page teaser 2",
+							"text": "Lorem ipsum teaser 2",
+							"link": "/subnav/site2.html"
+						}
+					]
+				}
+			]
+		}
+	]
+}
