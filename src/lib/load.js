@@ -17,6 +17,14 @@ import(/* webpackMode: "lazy", webpackChunkName: "vueTest" */ '../components/vue
 		});
 	});
 
+import(/* webpackMode: "lazy", webpackChunkName: "componentA" */ '../components/componentA/index.js')
+	.then((file) => {
+		console.log('componentA/index.js promise then');
+		console.log(file);
+
+		new file.default($('h1'));
+	});
+
 
 // import App from '../components/vueTest/App.vue'
 
