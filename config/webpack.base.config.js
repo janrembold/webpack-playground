@@ -37,7 +37,9 @@ export default new Config().merge({
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env']
+						// presets: [['es2015', {modules: false}]],
+                        // presets: ['env'],
+						plugins: ['syntax-dynamic-import']
                     }
                 }
             },
