@@ -4,7 +4,7 @@ import Config from 'webpack-config';
 
 export default new Config().merge({
     // entry: glob.sync("./src/**/index.js"),
-    entry: function() {
+    entry: () => {
         return {
             "common": [
                 "./src/main.js"
@@ -24,7 +24,7 @@ export default new Config().merge({
 
     output: {
         path: path.join(__dirname, "../dist"),
-        publicPath: 'dist/',
+        publicPath: '/dist/',
         filename: '[name].bundle.js',
         chunkFilename : '[name].chunk.js'
     },
