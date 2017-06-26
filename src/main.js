@@ -1,21 +1,6 @@
 import Vue from 'vue';
-// import App from './../src/components/vueTest/App.vue';
-import router from './../src/router';
-import store from './store';
 import $ from 'jquery';
 import componentX from './../src/components/componentX';
-// import { sync } from 'vuex-router-sync'
-
-// sync(store, router)
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     root.$mount('#app');
-// });
-
-
-// let componentA = require("bundle-loader?lazy&name=componentA!../components/componentA/index.js");
-// let componentB = require("bundle-loader?lazy&name=componentB!../components/componentB/index.js");
-// let vueLazy = require("bundle-loader?lazy&name=vueTest!../components/vueTest/App.vue");
 
 
 import(/* webpackMode: "lazy", webpackChunkName: "vueTest" */ './../src/components/vueTest/App.vue')
@@ -28,10 +13,6 @@ import(/* webpackMode: "lazy", webpackChunkName: "vueTest" */ './../src/componen
             router,
             render: h => h(App)
         }).$mount('#app');
-        // new Vue({
-        //     el: '#app',
-        //     render: h => h(App)
-        // });
     });
 
 import(/* webpackMode: "lazy", webpackChunkName: "componentA" */ './../src/components/componentA')
