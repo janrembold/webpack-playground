@@ -16,7 +16,7 @@ export default new Config().merge({
             // "componentA": "./src/components/componentA/index.js",
             "componentB": "./src/components/componentB/index.js",
             "componentC": "./src/components/componentC/index.js",
-            // "vueTest": "./src/components/vueTest/App.vue",
+            "indexr": "./src/components/Index.vue",
             "vueTest2": "./src/components/vueTest/App2.vue",
             "vueTest3": "./src/components/vueTest/App3.vue"
         };

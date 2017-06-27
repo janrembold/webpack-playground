@@ -1,6 +1,25 @@
 import Vue from 'vue';
-import $ from 'jquery';
-import componentX from './../src/components/componentX';
+import VueRouter from 'vue-router'
+// import $ from 'jquery';
+import App from './../src/components/vueTest/App.vue';
+import App2 from './../src/components/vueTest/App2.vue';
+import Indexr from './../src/components/Index.vue';
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        // { path: '/products/:id', component: ProductDetails },
+        { path: '/', component: App, name: 'root', description: 'Root Desc' },
+        { path: '/app2', component: App2, name: 'App2', description: 'App2 Desc' },
+    ]
+})
+
+new Vue({
+    router,
+    render: h => h(Indexr)
+}).$mount('#indexr');
 
 
 import(/* webpackMode: "lazy", webpackChunkName: "vueTest" */ './../src/components/vueTest/App.vue')
@@ -9,19 +28,17 @@ import(/* webpackMode: "lazy", webpackChunkName: "vueTest" */ './../src/componen
         console.log(App);
 
         new Vue({
-            store,
-            router,
             render: h => h(App)
         }).$mount('#app');
     });
 
-import(/* webpackMode: "lazy", webpackChunkName: "componentA" */ './../src/components/componentA')
-    .then((file) => {
-        console.log('componentA/index.js promise then');
-        console.log(file);
-
-        new file.default($('h1'));
-    });
+// import(/* webpackMode: "lazy", webpackChunkName: "componentA" */ './../src/components/componentA')
+//     .then((file) => {
+//         console.log('componentA/index.js promise then');
+//         console.log(file);
+//
+//         new file.default($('h1'));
+//     });
 
 
 // import App from '../components/vueTest/App.vue'
@@ -51,4 +68,4 @@ import(/* webpackMode: "lazy", webpackChunkName: "componentA" */ './../src/compo
 // });
 //
 
-new componentX();
+// new componentX();

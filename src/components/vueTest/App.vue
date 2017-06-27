@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<h1>Test - {{msg}}</h1>
+		<h1>{{msg}}</h1>
 	</div>
 </template>
 
@@ -25,7 +25,7 @@
 					url: 'http://localhost:3000/site/1',
 					success: () => {
 						console.log('ajax success');
-						this.msg = 'Ajax loaded';
+						this.msg = 'Ajax lazy loaded - success';
 					},
 					error: () => {
 						console.log('ajax error');
