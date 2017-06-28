@@ -1,26 +1,26 @@
 <template>
     <div class="indexr">
-        <h1>{{msg}}</h1>
-
+        <h1>Frontend Framework 5.0.0</h1>
         <ul>
-            <li v-for="route in routes">
-                <h2>{{ route.name }}</h2>
-                <p>{{ route.description }}</p>
-                <router-link to="/">Link to {{ route.path }} - {{ route.name }}</router-link>
+            <li v-for="layout in routes" v-if="layout.path && layout.path !== '/'">
+                <h2>{{ layout.name }}</h2>
+                <ul>
+                    <li v-for="route in layout.children">
+                        <router-link :to="layout.path + '/' + route.path">Link to {{ layout.path }}/{{ route.path }}</router-link>
+                    </li>
+                </ul>
             </li>
         </ul>
+        <router-view></router-view>
     </div>
 </template>
 
 
 <script>
-    import App from './vueTest/App.vue';
-
     export default {
         name: 'indexr',
         data () {
             return {
-                msg: 'Indexr msg',
                 routes: []
             }
         },
@@ -35,8 +35,6 @@
 //                    , path: route.path
 //                })
 //            });
-//
-//            console.log(this.items);
         },
         methods: {
             getContent () {}

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 // import $ from 'jquery';
 import App from './../src/components/vueTest/App.vue';
 import App2 from './../src/components/vueTest/App2.vue';
-import Indexr from './../src/components/Index.vue';
+import Indexr from './components/Indexr.vue';
 
 Vue.use(VueRouter)
 

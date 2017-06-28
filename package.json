@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parallelshell \"yarn run json\" \"yarn run dev\"",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.babel.js --inline --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.config.babel.js",
-    "pre": "cross-env NODE_ENV=production webpack --config config/webpack.prerender.config.js --progress --hide-modules",
-    "ssr": "cross-env NODE_ENV=ssr webpack --config config/webpack.config.babel.js",
-    "json": "json-server --watch src/mock/db.json"
+    "start": "parallelshell \"yarn run json\" \"yarn run static:dev\"",
+    "json": "json-server --watch src/mock/db.json",
+    "static:dev": "webpack-dev-server --config config/webpack.static.dev.config.js --inline --open",
+    "static:prod": "webpack --config config/webpack.static.prod.config.js"
   },
   "repository": {},
   "license": "MIT",
